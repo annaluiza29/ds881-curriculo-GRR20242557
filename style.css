@@ -1,0 +1,207 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #003366; /* Azul escuro corporativo (lembra Electrolux) */
+    --secondary-color: #f4f6f8;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --accent: #0077b5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e9ecef;
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+/* CONTAINER PRINCIPAL */
+.resume-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* LAYOUT RESPONSIVO (Desktop = Grid, Mobile = Coluna) */
+@media (min-width: 768px) {
+    .resume-container {
+        flex-direction: row;
+    }
+}
+
+/* BARRA LATERAL (SIDEBAR) */
+.sidebar {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 3rem 2rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.profile-section h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #b0c4de;
+}
+
+.sidebar-section {
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-section h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section ul li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content {
+    flex: 2.5;
+    padding: 3rem 2rem;
+    background: #ffffff;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.content-section p {
+    color: var(--text-light);
+    text-align: justify;
+}
+
+/* LINHA DO TEMPO (TIMELINE) PARA EXPERIÊNCIA */
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--accent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -1.9rem;
+    top: 0.2rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0.2rem 0;
+}
+
+.date {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.timeline-content ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    color: var(--text-light);
+}
+
+.timeline-content ul li {
+    margin-bottom: 0.3rem;
+}
+
+/* FORMAÇÃO ACADÊMICA */
+.education-item {
+    margin-bottom: 1.5rem;
+}
+
+.education-item h3 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.education-item h4 {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
